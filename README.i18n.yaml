@@ -2,5 +2,5 @@
 # the git blob hash of each side as of the last confirmed-consistent state.
 # Both languages carry equal authority; after editing either side, bring the
 # other along and re-record the hashes (node -e with sha1("blob <n>\0"+text)).
-README.md: 87bc68e215b45745442c120c5dc6142388f6a075
-README.zh.md: e3f5b3ac30c396f6b2a924ef6b929d779de5d8d4
+README.md: c0fb6173e8f9ab38415af1233bd65058c4441c9d
+README.zh.md: 0706d2d19e3f1baee20fbfb3a94c276fb2bd44c0

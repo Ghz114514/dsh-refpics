@@ -124,7 +124,9 @@ know the plugin.
   [zhu1090093659/dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui) (in particular
   `packages/dsh-tool-describe-image`)
 - **dsh-better-sidebar** — the sidebar board tab integrates through its tab-registry service:
-  [omdsh-dev/DSH-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar)
+  [omdsh-dev/DSH-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar) (see the
+  [dsh-better-sidebar topic](https://github.com/topics/dsh-better-sidebar) for related projects
+  and integrations)
 - **Image providers** — [Openverse](https://openverse.org), [Pexels](https://www.pexels.com),
   [Pixabay](https://pixabay.com), [Unsplash](https://unsplash.com); the save-to-Eagle seam uses the
   official [Eagle local API](https://api.eagle.cool)

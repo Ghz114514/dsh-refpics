@@ -112,7 +112,8 @@ browser 半区、`src/core/` 为两侧共享纯逻辑、`cordis.patch.yml` 为 p
   [zhu1090093659/dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui)
   （尤其是 `packages/dsh-tool-describe-image`）
 - **dsh-better-sidebar** —— 侧边栏看板通过其标签页注册服务接入：
-  [omdsh-dev/DSH-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar)
+  [omdsh-dev/DSH-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar)（相关项目与接入
+  方式见 [dsh-better-sidebar topic 页](https://github.com/topics/dsh-better-sidebar)）
 - **图库来源** —— [Openverse](https://openverse.org)、[Pexels](https://www.pexels.com)、
   [Pixabay](https://pixabay.com)、[Unsplash](https://unsplash.com)；保存到 Eagle 使用官方
   [Eagle 本地 API](https://api.eagle.cool)
