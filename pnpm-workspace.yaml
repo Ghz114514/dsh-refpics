@@ -1,0 +1,11 @@
+packages:
+  - .
+
+allowBuilds:
+  esbuild: false
+  node-pty: set this to true or false
+
+minimumReleaseAgeExclude:
+  - dsh-better-sidebar@0.12.1
+
+verifyDepsBeforeRun: false

@@ -1,0 +1,6 @@
+# Bilingual-pair consistency record (dsh-web-ui docs/i18n.md convention):
+# the git blob hash of each side as of the last confirmed-consistent state.
+# Both languages carry equal authority; after editing either side, bring the
+# other along and re-record the hashes (node -e with sha1("blob <n>\0"+text)).
+README.md: 288504e0fde53fa4d19705707e7d53ccce9dc9ad
+README.zh.md: b059ce1daf6bff96ee6d4a25efee10f93f1921e1

@@ -1,0 +1,22 @@
+{
+  // Test-only program: type-checks tests/ without emitting.
+  "extends": "./tsconfig.host.json",
+  "compilerOptions": {
+    "composite": false,
+    "declaration": false,
+    "declarationMap": false,
+    "noEmit": true,
+    "outDir": "lib/types-test",
+    "rootDir": ".",
+    "types": ["node"]
+  },
+  "include": [
+    "src/index.ts",
+    "src/config.ts",
+    "src/providers.ts",
+    "src/routes.ts",
+    "src/core/**/*.ts",
+    "tests/**/*.ts"
+  ],
+  "references": []
+}

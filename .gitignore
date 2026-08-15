@@ -1,0 +1,16 @@
+# Dependencies and local install state
+node_modules/
+.pnpm-store/
+
+# Built artifacts kept OUT of git: source maps and tsc build info only.
+# The emitted bundles themselves (lib/index.js, lib/client.js, lib/types) ARE
+# committed so `dsh plugin add github:...` works without a build step.
+lib/**/*.map
+lib/**/*.tsbuildinfo
+lib/types-test/
+
+# Editor / OS noise
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

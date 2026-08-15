@@ -1,0 +1,14 @@
+# dsh-refpics bundle patch: inserts the ref-pics plugin row into the web
+# profile roster. Applied as a profile bundle layer (the `dsh.bundle.patch`
+# manifest field); install with
+# `dsh plugin --profile web add file:<repo>` (or link: for local development).
+#
+# One package, both halves: the node half (exports ".") runs in the host
+# process and registers the model-facing search_refs tool plus the
+# "Reference pictures" settings section; the browser half (declared by
+# `dsh.client`, served from lib/client.js) registers a keyed
+# tool.call.toolview entry for search_refs that renders each call as a
+# Pinterest-style masonry wall with a lightbox.
+- insert:
+    - id: ref-pics
+      name: 'dsh-refpics'
