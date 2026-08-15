@@ -104,8 +104,9 @@ brutalist poster layouts", "做一个赛博朋克风格的 moodboard".
 pnpm install          # dependencies (node >= 22.19)
 pnpm build            # tsc -b && tsdown -> lib/index.js (host) + lib/client.js (browser)
 pnpm typecheck        # host + client programs + tests
-pnpm test             # node --test tests/ (26 tests, in-process)
-node scripts/smoke-host.mjs   # live end-to-end: registers the tool and runs one real Openverse search
+pnpm test             # node --test tests/ (31 tests, in-process)
+node scripts/smoke-host.mjs    # live end-to-end: registers the tool and runs one real Openverse search
+node scripts/smoke-client.mjs  # simulated-browser smoke of the client bundle and its wiring
 ```
 
 Layout follows the dsh-web-ui family conventions (adapted to a standalone package): `src/index.ts`
@@ -113,3 +114,17 @@ host half, `src/client/` browser half, `src/core/` shared pure logic, `cordis.pa
 patch, `dsh.client` declaration for the browser bundle. The browser half uses the keyed
 `tool.call.toolview` slot (`key: search_refs`) with a generic-card fallback for UIs that do not
 know the plugin.
+
+## Credits
+
+- **DeepSeek Harness (dsh)** — the platform this plugin runs on:
+  [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness)
+- **dsh-web-ui plugin family** — the bundle-patch profile mechanism, the host/browser split, the
+  settings-section pattern, and the keyed `tool.call.toolview` slot pattern are adapted from
+  [zhu1090093659/dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui) (in particular
+  `packages/dsh-tool-describe-image`)
+- **dsh-better-sidebar** — the sidebar board tab integrates through its tab-registry service:
+  [omdsh-dev/DSH-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar)
+- **Image providers** — [Openverse](https://openverse.org), [Pexels](https://www.pexels.com),
+  [Pixabay](https://pixabay.com), [Unsplash](https://unsplash.com); the save-to-Eagle seam uses the
+  official [Eagle local API](https://api.eagle.cool)

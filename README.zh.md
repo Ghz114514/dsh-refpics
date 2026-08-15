@@ -93,11 +93,26 @@ poster layouts"、"做一个赛博朋克风格的 moodboard"。
 pnpm install          # 依赖（node >= 22.19）
 pnpm build            # tsc -b && tsdown -> lib/index.js（host）+ lib/client.js（browser）
 pnpm typecheck        # host + client 两个 program + 测试
-pnpm test             # node --test tests/（26 个用例，进程内运行）
-node scripts/smoke-host.mjs   # 端到端冒烟：注册工具并真实调用一次 Openverse 搜索
+pnpm test             # node --test tests/（31 个用例，进程内运行）
+node scripts/smoke-host.mjs    # 端到端冒烟：注册工具并真实调用一次 Openverse 搜索
+node scripts/smoke-client.mjs  # 模拟浏览器冒烟：client bundle 及其服务接线
 ```
 
 结构遵循 dsh-web-ui 全家桶约定（适配为独立包）：`src/index.ts` 为 host 半区、`src/client/` 为
 browser 半区、`src/core/` 为两侧共享纯逻辑、`cordis.patch.yml` 为 profile 补丁、`dsh.client`
 声明浏览器 bundle。浏览器半区使用 keyed 的 `tool.call.toolview` slot（`key: search_refs`），
 不认识该插件的 UI 自动回退到通用卡片。
+
+## 致谢
+
+- **DeepSeek Harness（dsh）** —— 本插件运行所在的宿主平台：
+  [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness)
+- **dsh-web-ui 插件全家桶** —— bundle 补丁的 profile 挂载机制、host/browser 双半区结构、设置区
+  模式与 keyed `tool.call.toolview` slot 模式参考自
+  [zhu1090093659/dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui)
+  （尤其是 `packages/dsh-tool-describe-image`）
+- **dsh-better-sidebar** —— 侧边栏看板通过其标签页注册服务接入：
+  [omdsh-dev/DSH-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar)
+- **图库来源** —— [Openverse](https://openverse.org)、[Pexels](https://www.pexels.com)、
+  [Pixabay](https://pixabay.com)、[Unsplash](https://unsplash.com)；保存到 Eagle 使用官方
+  [Eagle 本地 API](https://api.eagle.cool)
